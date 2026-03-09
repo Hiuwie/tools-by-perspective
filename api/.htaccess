@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteBase /api/
+
+# Signature sessions API routes.
+RewriteRule ^signature-sessions/?$ signature-sessions.php [QSA,L]
+RewriteRule ^signature-sessions/([A-Za-z0-9_-]+)/complete/?$ signature-sessions.php?session=$1&action=complete [QSA,L]
+RewriteRule ^signature-sessions/([A-Za-z0-9_-]+)/?$ signature-sessions.php?session=$1 [QSA,L]
