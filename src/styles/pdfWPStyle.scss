@@ -1,0 +1,203 @@
+.app-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    font-family: 'roboto', sans-serif;
+    color:#0D0D0D;
+
+    main{
+       
+        .hero{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+
+            h1{
+                font-size: 52px;
+                font-weight: 600;
+                padding: 5px 0;
+                margin-bottom: 36px;
+            }
+
+            p{
+                font-size: 18px;
+                font-weight: 600;
+                text-align: center;
+                // max-width: 600px;
+            }
+
+            .subtle{
+                font-size: 14px;
+                font-weight: 400;
+                color: #4F4F4F;
+            }
+        }
+
+        .workspace-toolbar{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+         
+           
+            width: 100%;
+            margin: 0 0 16px 0;
+            flex-wrap: wrap;
+
+
+            button{
+                padding: 8px 16px;
+                font-size: 14px;
+                font-weight: 500;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.14);
+
+                &.delete{
+                    background-color: #fff;
+                    color: #ff6b3d;
+                    border: none;
+                    height: 32px;
+                    padding: 0 12px;
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 6px;
+                }
+                &.sign{
+                    background-color: #fff;
+                    color: #ff6b3d;
+                    border: none;
+                    height: 32px;
+                    padding: 0 12px;
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 6px;
+                }
+                &.text{
+                    background-color: #fff;
+                    color: #ff6b3d;
+                    border: none;
+                    height: 32px;
+                    padding: 0 12px;
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 6px;
+                }
+                &.delete:hover,
+                &.sign:hover,
+                &.text:hover{
+                    background-color: #ff6b3d;
+                    color: #fff;
+                }
+                &.text.active{
+                    background-color: #ff6b3d;
+                    color: #fff;
+                }
+
+
+            }
+
+            .toolbar-btn-icon{
+                width: 34px;
+                height: 34px;
+                padding: 0;
+                border: none;
+                color: #ff6b3d;
+                background-color: #fff;
+                font-size: 16px;
+                font-weight: 700;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .toolbar-btn-icon:hover{
+                background-color: #ff6b3d;
+                color: #fff;
+            }
+
+        }
+
+        @media (max-width: 1024px){
+            .workspace-toolbar{
+                gap: 10px;
+                align-items: flex-start;
+            }
+        }
+        
+        .pdf-workspace-layout{
+            
+
+            .workspace-sidebar{
+                background-color: #FAF9F8;
+
+                .grid{
+
+                    .relative{
+
+                        .cursor-grab{
+                           
+                            cursor: grab;
+                            
+                                  input[type="checkbox"] {
+                            appearance: none;
+                            -webkit-appearance: none;
+                            width: 18px;
+                            height: 18px;
+                            background-color: #fff;
+                            border-radius: 4px ;
+                            border:.5px #FF5F3A solid;
+                            cursor: pointer;
+                            position: absolute;
+                            top: 0px;
+                            right: 0px;
+                            z-index: 10;
+                            transition: all 0.2s ease;
+                            -webkit-border-radius: 4px ;
+                            -moz-border-radius: 4px ;
+                            -ms-border-radius: 4px ;
+                            -o-border-radius: 4px ;
+                        }
+
+                            /* Checked state */
+                            input[type="checkbox"]:checked {
+                            background-color: #FF5F3A;
+                            }
+
+                            /* Checkmark */
+                            input[type="checkbox"]:checked::after {
+                            content: "✓";
+                            color: white;
+                            font-size: 12px;
+                            font-weight: bold;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            }
+                        }
+                    }
+                }
+
+          
+
+            }
+
+           
+                .workspace-preview {
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    overflow: auto;
+            }
+           
+        }
+    }
+}
